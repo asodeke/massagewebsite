@@ -8,7 +8,7 @@ To get a copy of the project on you local machine you can either Fork or Clone t
 
 ### Prerequisites 
 
-Have a local text editor e.g. Atom
+Have a local text editor e.g. Atom.
 Setup a local HTTP server. If you don't have one setup or don't know how follow this link ("https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server")
 
 ## Authors
