@@ -86,6 +86,10 @@
 		color: #86C129;
 	}
 
+	.staff {
+		border-radius: 50%;
+		width: 50%;
+	}
 	@media screen and (max-width: 768px) {
 	    .col-sm-4 {
 	        text-align: center;
@@ -230,7 +234,7 @@
 				 <p>Lorem ipsum..</p>
 			 </div>
 			 <div class="col-sm-4">
-				 <img src="img/logo-2.png" class="logo" alt="Logo">
+				 <img src="img/staff.png" class="logo staff" alt="Logo">
 			 </div>
 		 </div>
 		</div>
@@ -433,10 +437,16 @@
 </body>
 <!-- Adding Service Worker -->
 <script>
-if('serviceWorker' in navigator) {
-  navigator.serviceWorker
-           .register('/sw.js')
-           .then(function() { console.log("Service Worker Registered"); });
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('./sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
 }
 </script>
 
